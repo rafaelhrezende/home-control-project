@@ -1,2 +1,18 @@
 # home-control-project
-project's goal is to work with new technologies while develop a useful system to help people to control finances.
+The project's goal is to work with new technologies while develop a useful system to help people to control finances.
+This project means to plan the home-control system. Describe main modules and functionalities.
+Each module will be planned individualy. 
+
+## General
+* Each module can be developed multiple times - The goal is to use this project to learn some technologies. 
+* The database model will also be created separeted - At first postgresql will be used (the database alread exists).
+* The idea is to create some repository. Each technology implementation will have a unique repository. 
+
+## Technologies
+* To describe the system with diagrams plantuml will be used. 
+* The project descriptions and diagrams will be stored in this repository. All implementatio will be guided by this. 
+
+## Modules
+In order of development priority:
+1. *People and Wallets:* All modules use the concept of person and wallet, so must be the first. Note that people and wallet don't represents users of the system.
+2. *Wage Control:* Module when the user will add income. 
