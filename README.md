@@ -4,9 +4,9 @@ This project means to plan the home-control system. Describe main modules and fu
 Each module will be planned individualy. 
 
 ## General
-* Each module can be developed multiple times - The goal is to use this project to learn some technologies. 
+* The development of each module can use different technologies.
 * The database model will also be created separeted - At first postgresql will be used (the database alread exists).
-* The idea is to create some repository. Each technology implementation will have a unique repository. 
+* The idea is to create few code repositories. Each technology implementation will have a unique repository. 
 
 ## Technologies
 * To describe the system with diagrams plantuml will be used. 
