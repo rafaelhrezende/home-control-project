@@ -12,7 +12,12 @@ Each module will be planned individualy.
 * To describe the system with diagrams plantuml will be used. 
 * The project descriptions and diagrams will be stored in this repository. All implementatio will be guided by this. 
 
-## Modules
+## Service Modules
 In order of development priority:
 1. *People and Wallets:* All modules use the concept of person and wallet, so must be the first. Note that people and wallet don't represents users of the system.
 2. *Wage Control:* Module when the user will add income. 
+3. *Bills Control:*  
+4. *Wallet Flow:*  
+5. *Purchase Control:* 
+6. *Importation:* Allow import data from bank's exported file. 
+
