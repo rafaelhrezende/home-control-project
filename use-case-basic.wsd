@@ -1,0 +1,58 @@
+@startuml
+
+    skinparam monochrome true
+
+    interface IAuth as "Auth Api"
+    interface IWallet as "Wallet service Api"
+    interface IWage as "Wage service Api"
+    interface IBill as "Bill service Api"
+    interface IPurchase as "Purchase service Api"
+
+    package "Authentication Broker"{
+        component authComp as "Authentication Service"
+        database "Identity Storage"
+        
+        authComp -> (Identity Storage)
+        authComp -- IAuth : HTTP
+    }
+    
+    package "Wallet Service"{
+        component walletSComp as "Wallet Service"
+        database "Wallet Storage"
+        walletSComp -> (Wallet Storage)
+        walletSComp -- IWallet
+    }
+
+    package "Wage Service"{
+        component wageSComp as "Wage Service"
+        database "Wage Storage"    
+        wageSComp-> (Wage Storage)
+        wageSComp -- IWage
+    }
+    
+    package "Bill Service" {
+        component billSComp as "Bill Service"
+        database "Bill Storage"
+        billSComp -> (Bill Storage)
+        billSComp -- IBill
+    }
+
+    package "Purchase Service"{
+        component purchaseSComp as "Purchase Service"
+        component purchaeImpSComp as "Purchase Importation"
+        database "Purchase Storage"
+        purchaseSComp -Down-> purchaeImpSComp
+        purchaseSComp -left-> (Purchase Storage)
+        purchaseSComp -up- IPurchase
+        purchaeImpSComp ->(Purchase Storage)
+    }
+
+    
+    'All Services uses the Authentication service
+    walletSComp -Right..>IAuth
+    wageSComp -Up..> IAuth
+    billSComp -Up..> IAuth
+    IAuth <.. purchaseSComp
+    
+
+@enduml
