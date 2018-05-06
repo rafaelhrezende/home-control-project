@@ -21,3 +21,4 @@ In order of development priority:
 5. *Purchase Control:* 
 6. *Importation:* Allow import data from bank's exported file. 
 
+This project has changed the repository. Check https://github.com/Lupus-araha.
